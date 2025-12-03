@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/SampleScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Scenes/StartScene.unity
+    guid: bc198bb0621fda5409b1eedba783faf9
+  - enabled: 1
+    path: Assets/Scenes/Scenes/CharacterSelect.unity
+    guid: 78bb14b38e7ac4543a0da80be54e3246
+  - enabled: 1
+    path: Assets/Scenes/Scenes/WinScene.unity
+    guid: 7f8030149698846b6bbfff1283914b57
+  - enabled: 1
+    path: Assets/Scenes/Scenes/Game Over.unity
+    guid: b0bc0c8f0c30e448c933b2f2c1816052
+  - enabled: 1
+    path: Assets/Scenes/Scenes/Game Over 2.unity
+    guid: 24c18f54523bda64f98e2acaeb6e1828
+  - enabled: 1
+    path: Assets/Scenes/Scenes/Game Over 3.unity
+    guid: 58cdd695e0e1812418262ae9cbcefb80
+  - enabled: 1
+    path: Assets/Scenes/Scenes/Game Over 4.unity
+    guid: 5a3ad33c2b8bb7d4b95317916306b63d
+  - enabled: 1
+    path: Assets/Scenes/Scenes/Game Over 5.unity
+    guid: c8a0d96299fe09d45911b146211300db
+  - enabled: 1
+    path: Assets/Scenes/Scenes/Instructions.unity
+    guid: 77e04bfa5a6140b4e8a1aba9f2dbc69b
+  - enabled: 1
+    path: Assets/Scenes/Scenes/Main Scene.unity
+    guid: 6a335a4cd1f78054b899c4dc5fc3e4c2
+  - enabled: 1
+    path: Assets/Scenes/Scenes/Scene2.unity
+    guid: 6ef11380138af0741acc14d99d2d0f01
+  - enabled: 1
+    path: Assets/Scenes/Scenes/Mage/Game Over 2A.unity
+    guid: 00fcf305471d5eb49b2c037fd9a9a8e8
+  - enabled: 1
+    path: Assets/Scenes/Scenes/Mage/Game Over 3A.unity
+    guid: a63faa7a33525d148972706521fa254f
+  - enabled: 1
+    path: Assets/Scenes/Scenes/Mage/Game Over 4A.unity
+    guid: 98dd05f11556eb148adcd94c539dfa8c
+  - enabled: 1
+    path: Assets/Scenes/Scenes/Mage/Game Over 5A.unity
+    guid: 68048f1fe16dac249aade6c64ee06f65
+  - enabled: 1
+    path: Assets/Scenes/Scenes/Mage/Game Over A.unity
+    guid: 709b74f9639dd8540995c9d24c09ce8d
+  - enabled: 1
+    path: Assets/Scenes/Scenes/Mage/Main Scene A.unity
+    guid: dd93f6e6642d6504a806ad22185d1050
+  - enabled: 1
+    path: Assets/Scenes/Scenes/Mage/Scene2A.unity
+    guid: cc08b7b790be7b54fb450e82f6206daa
+  - enabled: 1
+    path: Assets/Scenes/Scenes/Mage/Scene3A.unity
+    guid: 7c51b90ea55d9344486a0ae38a3507b5
+  - enabled: 1
+    path: Assets/Scenes/Scenes/Mage/Scene4A.unity
+    guid: d83e842d692406b4d9b098a7fab5f3b2
+  - enabled: 1
+    path: Assets/Scenes/Scenes/Mage/Scene5A.unity
+    guid: af7df5b3449bea34aa3e3667236d81c7
+  - enabled: 1
+    path: Assets/Scenes/Scenes/Scene3.unity
+    guid: 93a82295564a57a43b0c9c0c0d35181c
+  - enabled: 1
+    path: Assets/Scenes/Scenes/Scene4.unity
+    guid: e4ec382b95a1bd3499334dfe2857ed72
+  - enabled: 1
+    path: Assets/Scenes/Scenes/Scene5.unity
+    guid: 35eed95beb3427f4ca8941219a3f5d1d
+  m_configObjects: {}
