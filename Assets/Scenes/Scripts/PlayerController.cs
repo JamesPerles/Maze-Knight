@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                rb.velocity = knockbackDirection * knockbackForce;
+                rb.linearVelocity = knockbackDirection * knockbackForce;
             }
         }
     }

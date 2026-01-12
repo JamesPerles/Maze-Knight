@@ -45,7 +45,7 @@ namespace Scenes.Scripts
                 {
                     _spriteRenderer.sprite = dizzySprite; 
                     _spriteRenderer.color = Color.blue;
-                    _rb.velocity = Vector2.zero;
+                    _rb.linearVelocity = Vector2.zero;
                     _playerMovement.enabled = false; 
                 }
             }

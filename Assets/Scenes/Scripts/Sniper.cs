@@ -105,7 +105,7 @@ public class SniperEnemy : MonoBehaviour
         Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
-            rb.velocity = direction * projectileSpeed;
+            rb.linearVelocity = direction * projectileSpeed;
         }
 
         // Set the projectile to self-destruct after a specified lifetime

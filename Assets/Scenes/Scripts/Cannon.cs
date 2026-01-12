@@ -35,7 +35,7 @@ namespace Scenes.Scripts
             var position = transform.position;
             GameObject iceBlock = Instantiate(iceBlockPrefab, position, Quaternion.identity);
             Vector2 direction = (_player.position - position).normalized;
-            iceBlock.GetComponent<Rigidbody2D>().velocity = direction * iceBlockSpeed;
+            iceBlock.GetComponent<Rigidbody2D>().linearVelocity = direction * iceBlockSpeed;
         }
         
         private void OnCollisionEnter2D(Collision2D collision)

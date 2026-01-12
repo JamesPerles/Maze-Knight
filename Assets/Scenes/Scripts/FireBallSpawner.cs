@@ -40,7 +40,7 @@ namespace Scenes.Scripts
                 {
                     fireball.transform.right = direction;
                 }
-                fireballRb.velocity = direction * fireballSpeed;
+                fireballRb.linearVelocity = direction * fireballSpeed;
 
                 
                 GameObject player = GameObject.FindGameObjectWithTag(playerTag);
@@ -57,7 +57,7 @@ namespace Scenes.Scripts
                     {
                         Vector2 enemyDirection = (collider.transform.position - transform.position).normalized;
                         fireball.transform.right = enemyDirection;
-                        fireballRb.velocity = enemyDirection * fireballSpeed;
+                        fireballRb.linearVelocity = enemyDirection * fireballSpeed;
                         break;
                     }
                 }
