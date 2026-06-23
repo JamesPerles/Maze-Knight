@@ -1,22 +1,16 @@
 using UnityEngine;
-
-namespace Scenes.Scripts
-{
     public class Frozen : MonoBehaviour
     {
         public float freezeDuration = 2f; 
         public Sprite dizzySprite; 
-
-        private Rigidbody2D _rb; 
-        private bool _isFrozen = false; 
-        private float _freezeTimer = 0f; 
-        private Color _originalColor; 
-        private PlayerMovement _playerMovement; 
-        private SpriteRenderer _spriteRenderer; 
-        private Sprite _originalSprite; 
-
-
-        private void Start()
+        Rigidbody2D _rb; 
+        bool _isFrozen = false; 
+        float _freezeTimer = 0f; 
+        Color _originalColor; 
+        PlayerMovement _playerMovement; 
+        SpriteRenderer _spriteRenderer; 
+        Sprite _originalSprite; 
+        void Start()
         {
             _rb = GetComponent<Rigidbody2D>();
             _spriteRenderer = GetComponent<SpriteRenderer>();
@@ -24,11 +18,8 @@ namespace Scenes.Scripts
             _playerMovement = GetComponent<PlayerMovement>();
             _originalSprite = _spriteRenderer.sprite;
         }
-
-
-        private void Update()
+        void Update()
         {
-            
             if (_isFrozen)
             {
                 _freezeTimer += Time.deltaTime;
@@ -50,9 +41,7 @@ namespace Scenes.Scripts
                 }
             }
         }
-
-
-        private void OnCollisionEnter2D(Collision2D collision)
+        void OnCollisionEnter2D(Collision2D collision)
         {
             if (collision.gameObject.CompareTag("IceBlock")) 
             {
@@ -60,4 +49,3 @@ namespace Scenes.Scripts
             }
         }
     }
-}

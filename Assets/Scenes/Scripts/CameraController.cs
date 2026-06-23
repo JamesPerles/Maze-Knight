@@ -1,7 +1,4 @@
 using UnityEngine;
-
-namespace Scenes.Scripts
-{
     public class CameraController : MonoBehaviour
     {
         public Transform target;   
@@ -20,4 +17,3 @@ namespace Scenes.Scripts
         }
 
     }
-}

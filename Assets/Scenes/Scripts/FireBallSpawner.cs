@@ -1,7 +1,4 @@
 using UnityEngine;
-
-namespace Scenes.Scripts
-{
     public class FireBallSpawner : MonoBehaviour
     {
         public GameObject fireballPrefab;           
@@ -10,10 +7,8 @@ namespace Scenes.Scripts
         public string playerTag = "Player";         
         public float enemyRange = 5f;               
         public float spawnDelay = 0.5f;             
-        private float _lastSpawnTime;               
-
-        
-        private void Update()
+        float _lastSpawnTime;               
+        void Update()
         {
             if (Input.GetKeyDown(KeyCode.Z) && Time.time >= _lastSpawnTime + spawnDelay)
             {
@@ -21,20 +16,14 @@ namespace Scenes.Scripts
                 _lastSpawnTime = Time.time;
             }
         }
-
-        
-        private void SpawnFireball()
+        void SpawnFireball()
         {
             GameObject fireball = Instantiate(fireballPrefab, transform.position, Quaternion.identity);  
             Rigidbody2D fireballRb = fireball.GetComponent<Rigidbody2D>();
-
             if (fireballRb != null)
             {
-                
                 float directionX = Input.GetAxisRaw("Horizontal");
                 float directionY = Input.GetAxisRaw("Vertical");
-
-                
                 Vector2 direction = new Vector2(directionX, directionY).normalized;
                 if (directionX != 0 || directionY != 0)
                 {
@@ -47,9 +36,7 @@ namespace Scenes.Scripts
                 if (player != null)
                 {
                     Physics2D.IgnoreCollision(fireball.GetComponent<Collider2D>(), player.GetComponent<Collider2D>());
-                }
-
-             
+                }   
                 Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, enemyRange);
                 foreach (Collider2D collider in colliders)
                 {
@@ -61,10 +48,7 @@ namespace Scenes.Scripts
                         break;
                     }
                 }
-
-                
                 Destroy(fireball, fireballLifetime);
             }
         }
     }
-}

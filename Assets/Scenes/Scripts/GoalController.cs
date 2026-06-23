@@ -1,12 +1,10 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
 public class GoalController : MonoBehaviour
 {
     public float range = 5f;
-    public string sceneToLoad;  // Expose scene name in Inspector
-
-    private void OnTriggerEnter2D(Collider2D other)
+    public string sceneToLoad;
+   void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
@@ -19,8 +17,7 @@ public class GoalController : MonoBehaviour
                     return;
                 }
             }
-
-            if (!string.IsNullOrEmpty(sceneToLoad))  // Check if scene name is set
+            if (!string.IsNullOrEmpty(sceneToLoad))
             {
                 SceneManager.LoadScene(sceneToLoad);
             }
@@ -30,8 +27,7 @@ public class GoalController : MonoBehaviour
             }
         }
     }
-
-    private void OnDrawGizmosSelected()
+    void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, range);

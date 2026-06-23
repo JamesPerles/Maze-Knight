@@ -1,33 +1,24 @@
 using UnityEngine;
-
 public class PlayerController : MonoBehaviour
 {
-    
     public float knockbackForce = 10f;         
     public float knockbackDuration = 0.5f;    
     public float invincibleDuration = 2f;      
-
-    private Rigidbody2D rb;                    
-    private bool isInvincible = false;          
-    private float invincibleTimer = 0f;         
-    private bool isKnockedBack = false;         
-    private float knockbackTimer = 0f;          
-    private Vector2 knockbackDirection;         
-
-
-    private void Start()
+    Rigidbody2D rb;                    
+    bool isInvincible = false;          
+    float invincibleTimer = 0f;         
+    bool isKnockedBack = false;         
+    float knockbackTimer = 0f;          
+    Vector2 knockbackDirection;         
+    void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
-
-
-    private void Update()
+    void Update()
     {
-        
         if (isInvincible)
         {
             invincibleTimer += Time.deltaTime;
-
             if (invincibleTimer >= invincibleDuration)
             {
                 isInvincible = false;
@@ -39,8 +30,6 @@ public class PlayerController : MonoBehaviour
                 GetComponent<SpriteRenderer>().enabled = !GetComponent<SpriteRenderer>().enabled;
             }
         }
-
-     
         if (isKnockedBack)
         {
             knockbackTimer += Time.deltaTime;
@@ -56,9 +45,7 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-
-   
-    private void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))   
         {

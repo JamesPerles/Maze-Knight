@@ -1,27 +1,19 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
-namespace Scenes.Scripts
-{
     public class PlayerHp2 : MonoBehaviour
     {
         public int maxHP = 3;                   
         public int currentHP;                   
         public float knockbackForce = 10f;      
-
-        private Rigidbody2D rb;                 
-        private Color _originalColor;            
-
-        
-        private void Start()
+        Rigidbody2D rb;                 
+        Color _originalColor;            
+        void Start()
         {
             rb = GetComponent<Rigidbody2D>();
             currentHP = maxHP;
             _originalColor = GetComponent<SpriteRenderer>().color;
         }
-
-        
-        private void OnCollisionEnter2D(Collision2D collision)
+        void OnCollisionEnter2D(Collision2D collision)
         {
             if (collision.gameObject.CompareTag("Enemy"))   
             {
@@ -30,9 +22,7 @@ namespace Scenes.Scripts
                 rb.AddForce(knockbackDirection * knockbackForce, ForceMode2D.Impulse);
             }
         }
-
-       
-        private void TakeDamage()
+        void TakeDamage()
         {
             currentHP--;
 
@@ -44,7 +34,6 @@ namespace Scenes.Scripts
             {
                 GetComponent<SpriteRenderer>().color = Color.red;
             }
-
             if (currentHP <= 0)         
             {
                 Destroy(gameObject);
@@ -52,4 +41,3 @@ namespace Scenes.Scripts
             }
         }
     }
-}

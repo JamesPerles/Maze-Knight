@@ -1,15 +1,13 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
 public class Restart : MonoBehaviour
 {
-    public string sceneToLoad;  // Expose scene name in Inspector
-
+    public string sceneToLoad;
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            if (!string.IsNullOrEmpty(sceneToLoad))  // Check if scene name is set
+            if (!string.IsNullOrEmpty(sceneToLoad))
             {
                 SceneManager.LoadScene(sceneToLoad);
             }
